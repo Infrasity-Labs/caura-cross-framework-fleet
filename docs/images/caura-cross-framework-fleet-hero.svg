@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Caura cross-framework fleet</title>
+  <desc id="desc">Agents built on OpenAI Agents SDK, CrewAI and LangGraph share one Caura fleet memory.</desc>
+  <defs>
+    <radialGradient id="left" cx="0" cy="1" r="1">
+      <stop offset="0" stop-color="#c44a00"/>
+      <stop offset=".55" stop-color="#5b120d" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#050008" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="right" cx="1" cy="0" r=".8">
+      <stop offset="0" stop-color="#3b1d7a" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#050008" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop stop-color="#ff8a34"/>
+      <stop offset="1" stop-color="#9d6cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#050008"/>
+  <rect width="1200" height="675" fill="url(#left)"/>
+  <rect width="1200" height="675" fill="url(#right)"/>
+  <text x="72" y="90" fill="#ff9a51" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="6">CAURA</text>
+  <text x="72" y="225" fill="#fff" font-family="Georgia, serif" font-size="74" font-weight="700">Cross-framework fleet</text>
+  <text x="75" y="285" fill="#ddd6e8" font-family="Arial, sans-serif" font-size="27">Three frameworks. One shared memory. One source of truth.</text>
+
+  <path d="M180 428 H1020" stroke="url(#line)" stroke-width="4"/>
+  <g fill="#0e0b14" stroke="#ff8a34" stroke-width="3">
+    <rect x="60" y="380" width="240" height="96" rx="18"/>
+    <rect x="340" y="380" width="240" height="96" rx="18"/>
+    <rect x="620" y="380" width="240" height="96" rx="18"/>
+    <rect x="900" y="380" width="240" height="96" rx="18" stroke="#9d6cff"/>
+    <rect x="390" y="552" width="420" height="82" rx="18" stroke="#56d4c5"/>
+  </g>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g fill="#fff" font-size="23" font-weight="700">
+      <text x="180" y="420">Researcher</text>
+      <text x="460" y="420">Writer</text>
+      <text x="740" y="420">Reviewer</text>
+      <text x="1020" y="420">Editor</text>
+      <text x="600" y="601">Caura fleet memory</text>
+    </g>
+    <g fill="#ddd6e8" font-size="17">
+      <text x="180" y="450">OpenAI Agents SDK</text>
+      <text x="460" y="450">CrewAI</text>
+      <text x="740" y="450">LangGraph</text>
+      <text x="1020" y="450">LangGraph + Caura Rail</text>
+    </g>
+  </g>
+  <path d="M180 476 L470 552 M460 476 L560 552 M740 476 L640 552 M1020 476 L730 552" stroke="#ded7eb" stroke-width="3" fill="none"/>
+  <g fill="#ff9a51" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" text-anchor="middle">
+    <text x="300" y="522">MCP</text>
+    <text x="490" y="522">MCP</text>
+    <text x="712" y="522">MCP</text>
+    <text x="908" y="522" fill="#b99bff">REST</text>
+  </g>
+</svg>

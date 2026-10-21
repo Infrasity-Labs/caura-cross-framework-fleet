@@ -1,4 +1,8 @@
-<h1 align="center">Caura Cross-Framework Fleet</h1>
+<p align="center">
+  <a href="https://caura.ai">
+    <img src="docs/images/caura-cross-framework-fleet-hero.svg" alt="Caura Cross-Framework Fleet" width="100%" />
+  </a>
+</p>
 
 <p align="center">
   <strong>One shared memory for agents built on OpenAI Agents SDK, CrewAI and LangGraph.</strong><br/>
@@ -105,14 +109,9 @@ Teams rarely standardise on one agent framework. A research agent on the OpenAI 
 
 ## How It Works
 
-```mermaid
-flowchart LR
-    R["Researcher<br/>OpenAI Agents SDK"] -- MCP --> C
-    W["Writer<br/>CrewAI"] -- MCP --> C
-    V["Reviewer<br/>LangGraph"] -- MCP --> C
-    E["Editor<br/>LangGraph + Caura Rail"] -- REST --> C
-    C[("Caura<br/>fleet: launch-team")]
-```
+<p align="center">
+  <img src="docs/images/caura-architecture.svg" alt="Caura cross-framework fleet architecture" width="90%" />
+</p>
 
 ### How each framework connects to Caura
 
@@ -141,16 +140,11 @@ Writes use `visibility: scope_team`, so every agent in the fleet can recall them
 
 ### How the correction works
 
-```
-Reviewer (LangGraph)
-   caura_recall  "pricing API rate limit"     -> finds "100 requests per minute" + its id
-   caura_manage  op=transition status=outdated -> retires it
-   caura_write   "60 requests per minute"     -> stores the correction
-                         |
-                         v
-Researcher (OpenAI Agents SDK)
-   caura_recall  "pricing API rate limit"     -> active memories only: "60 requests per minute"
-```
+<p align="center">
+  <img src="docs/images/caura-correction-flow.svg" alt="How one correction reaches every framework" width="100%" />
+</p>
+
+The Reviewer finds the wrong memory with `caura_recall`, retires it with `caura_manage` (`op="transition"`, `status="outdated"`), and stores the new fact with `caura_write`. Recall returns active memories only, so every other agent sees the corrected limit from then on.
 
 Caura can also detect conflicting facts on its own when an LLM provider is configured. This demo retires the old fact explicitly, so it behaves the same with or without a provider.
 
@@ -330,6 +324,7 @@ For a production fleet, give each agent its own credential. Caura's [per-agent k
 ├── langgraph_agents/        <- Reviewer (MCP)
 ├── langgraph_rail/          <- Editor (Caura Rail over REST)
 ├── scripts/start-caura.sh   <- Starts or stops the open-source Caura server
+├── docs/images/             <- README banner and diagrams (SVG)
 └── tests/
     ├── fake_llm.py          <- Scripted OpenAI-compatible model for key-free runs
     ├── test_demo_flow.py    <- End-to-end story against a running Caura
