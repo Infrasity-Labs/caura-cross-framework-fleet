@@ -1,0 +1,9 @@
+openai-agents>=0.20,<1
+crewai>=1.15,<2
+crewai-tools[mcp]>=1.15,<2
+langgraph>=1.2,<2
+langchain>=1,<2
+langchain-openai>=1,<2
+langchain-mcp-adapters>=0.3,<1
+caura-rail>=1.0,<2
+pytest>=8
