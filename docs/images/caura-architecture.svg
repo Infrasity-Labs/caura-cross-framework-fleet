@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" role="img" aria-labelledby="title desc">
+  <title id="title">Caura cross-framework fleet architecture</title>
+  <desc id="desc">Researcher, Writer and Reviewer reach Caura over MCP through a shared identity binding layer. The Editor reaches Caura over REST with Caura Rail. All four share the launch-team fleet.</desc>
+  <rect width="1000" height="720" fill="#08070b"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g fill="#14111b" stroke="#ff7a22" stroke-width="3">
+      <rect x="35" y="35" width="210" height="100" rx="14"/>
+      <rect x="275" y="35" width="210" height="100" rx="14"/>
+      <rect x="515" y="35" width="210" height="100" rx="14"/>
+      <rect x="755" y="35" width="210" height="100" rx="14" stroke="#9d6cff"/>
+      <rect x="35" y="200" width="690" height="100" rx="14" stroke="#ff9a51" stroke-dasharray="8 6"/>
+      <rect x="755" y="200" width="210" height="100" rx="14" stroke="#9d6cff" stroke-dasharray="8 6"/>
+      <rect x="35" y="365" width="690" height="90" rx="14" stroke="#9d6cff"/>
+      <rect x="755" y="365" width="210" height="90" rx="14" stroke="#9d6cff"/>
+      <rect x="135" y="535" width="730" height="120" rx="22" stroke="#56d4c5"/>
+    </g>
+    <g fill="#fff">
+      <text x="140" y="78" font-size="22" font-weight="700">Researcher</text>
+      <text x="140" y="106" font-size="15" fill="#ddd6e8">OpenAI Agents SDK</text>
+      <text x="380" y="78" font-size="22" font-weight="700">Writer</text>
+      <text x="380" y="106" font-size="15" fill="#ddd6e8">CrewAI</text>
+      <text x="620" y="78" font-size="22" font-weight="700">Reviewer</text>
+      <text x="620" y="106" font-size="15" fill="#ddd6e8">LangGraph</text>
+      <text x="860" y="78" font-size="22" font-weight="700">Editor</text>
+      <text x="860" y="106" font-size="15" fill="#ddd6e8">LangGraph + Caura Rail</text>
+
+      <text x="380" y="240" font-size="22" font-weight="700">Identity binding · fleet_common/identity.py</text>
+      <text x="380" y="270" font-size="16" fill="#ddd6e8">hides agent_id · fleet_id · visibility from the model and writes them in code</text>
+      <text x="860" y="240" font-size="20" font-weight="700">MemoryScope</text>
+      <text x="860" y="270" font-size="15" fill="#ddd6e8">agent + fleet set in code</text>
+
+      <text x="380" y="403" font-size="24" font-weight="700">Caura MCP · /mcp</text>
+      <text x="380" y="432" font-size="16" fill="#ddd6e8">caura_write · caura_recall · caura_manage</text>
+      <text x="860" y="403" font-size="22" font-weight="700">Caura REST</text>
+      <text x="860" y="432" font-size="15" fill="#ddd6e8">recall around each turn</text>
+
+      <text x="500" y="583" font-size="26" font-weight="700">fleet: launch-team</text>
+      <text x="500" y="617" font-size="17" fill="#ddd6e8">scope_team visibility · per-agent attribution · active / outdated lifecycle</text>
+    </g>
+  </g>
+  <g stroke="#ddd6e8" stroke-width="3" fill="none">
+    <path d="M140 135 V200 M380 135 V200 M620 135 V200 M860 135 V200"/>
+    <path d="M380 300 V365 M860 300 V365"/>
+    <path d="M380 455 V495 H500 V535 M860 455 V495 H500"/>
+  </g>
+</svg>
