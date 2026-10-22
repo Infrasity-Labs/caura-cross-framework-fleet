@@ -65,6 +65,12 @@ This repo is a **use-case implementation**: the same Caura fleet shared by agent
 | 4 | Researcher | OpenAI Agents SDK | Is asked the rate limit again and answers 60, where it said 100 before |
 | 5 (optional) | Editor | LangGraph with Caura Rail | Writes the final announcement, reading memory over REST |
 
+<p align="center">
+  <img src="docs/images/caura-demo.svg" alt="Recording of run_demo.py with a real model, followed by the memory table showing the old rate limit as outdated" width="100%" />
+</p>
+
+After the run, `scripts/show-memory.sh` prints what the fleet holds: the old fact is kept but marked `outdated`, and each memory names the agent that wrote it.
+
 Output from a run with a real model (`openai/gpt-5.4-mini`):
 
 ```text
